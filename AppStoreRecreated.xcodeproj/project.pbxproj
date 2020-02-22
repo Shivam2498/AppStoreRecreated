@@ -13,8 +13,27 @@
 		DF11A5F424010F5F00473843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF11A5F224010F5F00473843 /* LaunchScreen.storyboard */; };
 		DF11A5FC24014DA500473843 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A5FB24014DA500473843 /* CategoryCell.swift */; };
 		DF11A5FE240158A800473843 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A5FD240158A800473843 /* AppCell.swift */; };
-		DF11A60024016BCF00473843 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A5FF24016BCF00473843 /* Models.swift */; };
+		DF11A60024016BCF00473843 /* AppDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A5FF24016BCF00473843 /* AppDataModel.swift */; };
+		DF11A6032401A0E500473843 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF11A6022401A0E500473843 /* Alamofire.framework */; };
+		DF11A6042401A0E500473843 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF11A6022401A0E500473843 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF11A6082401A53A00473843 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A6072401A53A00473843 /* AppStoreModel.swift */; };
+		DF11A60A2401A95D00473843 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A6092401A95D00473843 /* AppCategory.swift */; };
+		DF11A60C2401B1ED00473843 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A60B2401B1ED00473843 /* AppModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF11A6052401A0E500473843 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF11A6042401A0E500473843 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF11A5E424010F5C00473843 /* AppStoreRecreated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreRecreated.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,7 +44,11 @@
 		DF11A5F524010F5F00473843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF11A5FB24014DA500473843 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		DF11A5FD240158A800473843 /* AppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
-		DF11A5FF24016BCF00473843 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DF11A5FF24016BCF00473843 /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
+		DF11A6022401A0E500473843 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		DF11A6072401A53A00473843 /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
+		DF11A6092401A95D00473843 /* AppCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
+		DF11A60B2401B1ED00473843 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF11A6032401A0E500473843 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +68,7 @@
 			children = (
 				DF11A5E624010F5C00473843 /* AppStoreRecreated */,
 				DF11A5E524010F5C00473843 /* Products */,
+				DF11A6012401A0E500473843 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +90,20 @@
 				DF11A5F524010F5F00473843 /* Info.plist */,
 				DF11A5FB24014DA500473843 /* CategoryCell.swift */,
 				DF11A5FD240158A800473843 /* AppCell.swift */,
-				DF11A5FF24016BCF00473843 /* Models.swift */,
+				DF11A5FF24016BCF00473843 /* AppDataModel.swift */,
+				DF11A60B2401B1ED00473843 /* AppModel.swift */,
+				DF11A6092401A95D00473843 /* AppCategory.swift */,
+				DF11A6072401A53A00473843 /* AppStoreModel.swift */,
 			);
 			path = AppStoreRecreated;
+			sourceTree = "<group>";
+		};
+		DF11A6012401A0E500473843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF11A6022401A0E500473843 /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +116,8 @@
 				DF11A5E024010F5C00473843 /* Sources */,
 				DF11A5E124010F5C00473843 /* Frameworks */,
 				DF11A5E224010F5C00473843 /* Resources */,
+				DF11A6052401A0E500473843 /* Embed Frameworks */,
+				DF11A6062401A0ED00473843 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -135,6 +173,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DF11A6062401A0ED00473843 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF11A5E024010F5C00473843 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,8 +203,11 @@
 				DF11A5EC24010F5C00473843 /* FeaturedAppsController.swift in Sources */,
 				DF11A5FE240158A800473843 /* AppCell.swift in Sources */,
 				DF11A5E824010F5C00473843 /* AppDelegate.swift in Sources */,
+				DF11A60C2401B1ED00473843 /* AppModel.swift in Sources */,
+				DF11A6082401A53A00473843 /* AppStoreModel.swift in Sources */,
 				DF11A5FC24014DA500473843 /* CategoryCell.swift in Sources */,
-				DF11A60024016BCF00473843 /* Models.swift in Sources */,
+				DF11A60024016BCF00473843 /* AppDataModel.swift in Sources */,
+				DF11A60A2401A95D00473843 /* AppCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +345,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93989982S3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AppStoreRecreated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +367,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93989982S3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AppStoreRecreated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

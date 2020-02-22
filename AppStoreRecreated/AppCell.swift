@@ -9,6 +9,30 @@
 import UIKit
 
 class AppCell: UICollectionViewCell{
+    
+    var app : App?{
+        didSet{
+            if let appName = app?.name{
+                nameLabel.text = appName
+                let dummySize = CGSize(width: frame.width, height: 1000)
+                let rect = NSString(string: appName).boundingRect(with: dummySize, options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                
+                if rect.height > 20 {
+                    categoryLabel.frame = CGRect(x: 0, y: frame.width + 38, width: frame.width, height: 20)
+                    priceLabel.frame = CGRect(x: 0, y: frame.width + 56, width: frame.width, height: 20)
+                } else {
+                    categoryLabel.frame = CGRect(x: 0, y: frame.width + 22, width: frame.width, height: 20)
+                    priceLabel.frame = CGRect(x: 0, y: frame.width + 40, width: frame.width, height: 20)
+                }
+                nameLabel.frame = CGRect(x: 0, y: frame.width + 5, width: frame.width, height: 40)
+                nameLabel.sizeToFit()
+            }
+            categoryLabel.text = app?.category ?? ""
+            imageView.image = UIImage(named: app?.imageName ?? "")
+            priceLabel.text = "$\(app?.price ?? 0)"
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

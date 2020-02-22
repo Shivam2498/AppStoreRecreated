@@ -12,6 +12,17 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
     
      private let cellId = "appCellId"
     
+    var appCategory: AppCategory? {
+        didSet{
+            if let name = appCategory?.name{
+                nameLabel.text = name
+            }
+            else{
+                nameLabel.text = "" 
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -67,12 +78,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return appCategory?.apps?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppCell
+        cell.app = appCategory?.apps?[indexPath.item]
         return cell
     }
     
