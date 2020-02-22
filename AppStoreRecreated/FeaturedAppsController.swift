@@ -11,19 +11,21 @@ import UIKit
 class FeaturedAppsController: UICollectionViewController {
     
     private let cellId = "cellId"
+    var appCategories : [AppCategory]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.backgroundColor = .white
         collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
+        appCategories = AppCategory.sampleAppCategory()
     }
 }
 
 extension FeaturedAppsController{
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return appCategories?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
