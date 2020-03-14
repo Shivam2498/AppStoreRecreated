@@ -19,6 +19,7 @@
 		DF11A6082401A53A00473843 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A6072401A53A00473843 /* AppStoreModel.swift */; };
 		DF11A60A2401A95D00473843 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A6092401A95D00473843 /* AppCategory.swift */; };
 		DF11A60C2401B1ED00473843 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A60B2401B1ED00473843 /* AppModel.swift */; };
+		DFEE5255240B85DF00758DD1 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE5254240B85DF00758DD1 /* AppDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		DF11A6072401A53A00473843 /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
 		DF11A6092401A95D00473843 /* AppCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
 		DF11A60B2401B1ED00473843 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		DFEE5254240B85DF00758DD1 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				DF11A60B2401B1ED00473843 /* AppModel.swift */,
 				DF11A6092401A95D00473843 /* AppCategory.swift */,
 				DF11A6072401A53A00473843 /* AppStoreModel.swift */,
+				DFEE5254240B85DF00758DD1 /* AppDetailController.swift */,
 			);
 			path = AppStoreRecreated;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEE5255240B85DF00758DD1 /* AppDetailController.swift in Sources */,
 				DF11A5EC24010F5C00473843 /* FeaturedAppsController.swift in Sources */,
 				DF11A5FE240158A800473843 /* AppCell.swift in Sources */,
 				DF11A5E824010F5C00473843 /* AppDelegate.swift in Sources */,
@@ -344,7 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93989982S3;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -366,7 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93989982S3;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

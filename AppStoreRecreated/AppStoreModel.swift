@@ -10,4 +10,5 @@ import Foundation
 
 class AppStoreModel: NSObject,Codable{
     var categories: [AppCategory]?
+    var bannerCategory: AppCategory?
 }

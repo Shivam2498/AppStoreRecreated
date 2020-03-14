@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
+    var featuredAppsController :  FeaturedAppsController?
+    
      private let cellId = "appCellId"
     
     var appCategory: AppCategory? {
@@ -20,6 +22,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
             else{
                 nameLabel.text = "" 
             }
+            appsCollectionView.reloadData()
         }
     }
     
@@ -96,5 +99,9 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         return UIEdgeInsets.init(top: 0.0, left: 14.0, bottom: 0.0, right: 14.0)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = appCategory?.apps?[indexPath.item]{
+            featuredAppsController?.showDetailForApp(app: app)
+        }
+    }
 }
