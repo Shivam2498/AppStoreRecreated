@@ -63,6 +63,7 @@ extension FeaturedAppsController{
     func showDetailForApp(app: App){
         let layout = UICollectionViewFlowLayout()
         let appDetailContainer = AppDetailController(collectionViewLayout: layout)
+        appDetailContainer.app = app
         navigationController?.pushViewController(appDetailContainer, animated: true)
     }
 }

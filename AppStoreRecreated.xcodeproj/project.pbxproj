@@ -19,6 +19,8 @@
 		DF11A6082401A53A00473843 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A6072401A53A00473843 /* AppStoreModel.swift */; };
 		DF11A60A2401A95D00473843 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A6092401A95D00473843 /* AppCategory.swift */; };
 		DF11A60C2401B1ED00473843 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11A60B2401B1ED00473843 /* AppModel.swift */; };
+		DF12355B244B818700AB2320 /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12355A244B818700AB2320 /* AppDetailHeader.swift */; };
+		DF12355D244B89F300AB2320 /* ScreenshotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12355C244B89F300AB2320 /* ScreenshotsCell.swift */; };
 		DFEE5255240B85DF00758DD1 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEE5254240B85DF00758DD1 /* AppDetailController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		DF11A6072401A53A00473843 /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
 		DF11A6092401A95D00473843 /* AppCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
 		DF11A60B2401B1ED00473843 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		DF12355A244B818700AB2320 /* AppDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
+		DF12355C244B89F300AB2320 /* ScreenshotsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsCell.swift; sourceTree = "<group>"; };
 		DFEE5254240B85DF00758DD1 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,8 @@
 				DF11A6092401A95D00473843 /* AppCategory.swift */,
 				DF11A6072401A53A00473843 /* AppStoreModel.swift */,
 				DFEE5254240B85DF00758DD1 /* AppDetailController.swift */,
+				DF12355A244B818700AB2320 /* AppDetailHeader.swift */,
+				DF12355C244B89F300AB2320 /* ScreenshotsCell.swift */,
 			);
 			path = AppStoreRecreated;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				DF11A5FC24014DA500473843 /* CategoryCell.swift in Sources */,
 				DF11A60024016BCF00473843 /* AppDataModel.swift in Sources */,
 				DF11A60A2401A95D00473843 /* AppCategory.swift in Sources */,
+				DF12355B244B818700AB2320 /* AppDetailHeader.swift in Sources */,
+				DF12355D244B89F300AB2320 /* ScreenshotsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

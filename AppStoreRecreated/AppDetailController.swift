@@ -8,27 +8,45 @@
 
 import UIKit
 
-class AppDetailController : UICollectionViewController {
+class AppDetailController : UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var app:App?{
+        didSet{
+            navigationItem.title = app?.name
+        }
+    }
+    
+    private let headerId = "headerId"
+    private let cellId = "cellId"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.backgroundColor = UIColor.white
+        collectionView.register(AppDetailHeader.self, forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(ScreenshotsCell.self, forCellWithReuseIdentifier: cellId)
+        self.collectionView.alwaysBounceVertical = true
     }
-}
-
-class AppDetailHeader : BaseCell {
-    
-    let imageView : UIImageView = {
-        let iv = UIImageView()
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.contentMode = .scaleAspectFill
-        return iv
-    }() 
-    
-    override func setupViews() {
-        super.setupViews()
-        addSubview(imageView)
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppDetailHeader
+        header.app = app
+        return header
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize.init(width: view.frame.width,height: 180)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize.init(width: view.frame.width, height: 200)
+    }
 }
 
 class BaseCell : UICollectionViewCell {

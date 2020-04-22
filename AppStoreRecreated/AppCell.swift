@@ -79,15 +79,11 @@ class AppCell: UICollectionViewCell{
     
     func setupViews(){
         addSubview(imageView)
-        
         imageView.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: frame.width)
-        
         addSubview(nameLabel)
         nameLabel.frame = CGRect.init(x: 0, y: frame.width+2, width: frame.width, height: 40 )
-        
         addSubview(categoryLabel)
         categoryLabel.frame = CGRect.init(x: 0, y: frame.width+38, width: frame.width, height: 20)
-        
         addSubview(priceLabel)
         priceLabel.frame = CGRect.init(x: 0, y: frame.width+56, width: frame.width, height: 20)
     }
